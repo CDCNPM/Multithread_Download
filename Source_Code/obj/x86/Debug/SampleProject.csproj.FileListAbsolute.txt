@@ -1,0 +1,9 @@
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.FormNewDownload.resources
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.FormMain.resources
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.Properties.Resources.resources
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.csproj.GenerateResource.Cache
+C:\Users\nguye\Downloads\SampleProject\CS\bin\Debug\SampleProject.exe
+C:\Users\nguye\Downloads\SampleProject\CS\bin\Debug\SampleProject.pdb
+C:\Users\nguye\Downloads\SampleProject\CS\bin\Debug\SampleProject.xml
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.exe
+C:\Users\nguye\Downloads\SampleProject\CS\obj\x86\Debug\SampleProject.pdb
