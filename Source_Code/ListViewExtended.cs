@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Drawing2D;
-
+using System;
 
 namespace SampleProject
 {
@@ -72,14 +72,16 @@ namespace SampleProject
 
             if (e.ColumnIndex == 3)
             {
-                //StringFormat sf = new StringFormat();
-                //sf.Alignment = StringAlignment.Center;
-                //e.Graphics.FillRectangle(Brushes.White, e.Bounds);
-                //int FillPercent = System.Convert.ToInt32(((double.Parse(e.SubItem.Text)) / 100) * (e.Bounds.Width - 2));
-                //Brush brGradient = new LinearGradientBrush(new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height), Color.Green, Color.White, 270, true);
-                //e.Graphics.FillRectangle(brGradient, e.Bounds.X + 1, e.Bounds.Y + 2, FillPercent, e.Bounds.Height - 3);
-                //e.Graphics.DrawString(e.SubItem.Text + " %", this.Font, Brushes.Black, (float)(e.Bounds.X + ((double)e.Bounds.Width / 2)), e.Bounds.Y + 3, sf);
-                //e.Graphics.DrawRectangle(Pens.LightGray, e.Bounds.X, e.Bounds.Y + 1, e.Bounds.Width - 1, e.Bounds.Height - 2);
+                StringFormat sf = new StringFormat();
+                sf.Alignment = StringAlignment.Center;
+                e.Graphics.FillRectangle(Brushes.White, e.Bounds);
+                char[] spearator = { ' ' };
+                String[] strlist = e.SubItem.Text.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
+                int FillPercent = System.Convert.ToInt32(((double.Parse(strlist[0])) / 100) * (e.Bounds.Width - 2));
+                Brush brGradient = new LinearGradientBrush(new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height), Color.Green, Color.White, 270, true);
+                e.Graphics.FillRectangle(brGradient, e.Bounds.X + 1, e.Bounds.Y + 2, FillPercent, e.Bounds.Height - 3);
+                e.Graphics.DrawString(e.SubItem.Text + " %", this.Font, Brushes.Black, (float)(e.Bounds.X + ((double)e.Bounds.Width / 2)), e.Bounds.Y + 3, sf);
+                e.Graphics.DrawRectangle(Pens.LightGray, e.Bounds.X, e.Bounds.Y + 1, e.Bounds.Width - 1, e.Bounds.Height - 2);
             }
             else
             {
@@ -94,7 +96,7 @@ namespace SampleProject
 
 			lvw.SubItems.Add("0 Bytes"); 
 			lvw.SubItems.Add("Initializing..."); 
-			lvw.SubItems.Add("0 Bytes"); 
+			lvw.SubItems.Add("0 "); 
 			lvw.SubItems.Add("0"); 
 			
 			lvw.ImageKey = "Initializing"; 
