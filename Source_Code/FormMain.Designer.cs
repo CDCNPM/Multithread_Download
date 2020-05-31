@@ -58,6 +58,7 @@ namespace SampleProject
             this.btnRemove = new System.Windows.Forms.ToolStripButton();
             this.btnRemoveAll = new System.Windows.Forms.ToolStripButton();
             this.ToolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ListViewEx = new SampleProject.ListViewExtended();
             this.MyToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -129,7 +130,8 @@ namespace SampleProject
             this.ToolStripSeparator3,
             this.btnRemove,
             this.btnRemoveAll,
-            this.ToolStripSeparator6});
+            this.ToolStripSeparator6,
+            this.toolStripButton1});
             this.MyToolStrip.Location = new System.Drawing.Point(1056, 24);
             this.MyToolStrip.Name = "MyToolStrip";
             this.MyToolStrip.Size = new System.Drawing.Size(169, 562);
@@ -222,6 +224,16 @@ namespace SampleProject
             this.ToolStripSeparator6.Name = "ToolStripSeparator6";
             this.ToolStripSeparator6.Size = new System.Drawing.Size(166, 6);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(166, 24);
+            this.toolStripButton1.Text = "Get data to Web ";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // ListViewEx
             // 
             this.ListViewEx.BackColor = System.Drawing.Color.White;
@@ -250,11 +262,11 @@ namespace SampleProject
             this.Controls.Add(this.MyMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MyMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Download file 51603117 - 51603045";
+            this.Text = "Download file";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.MyToolStrip.ResumeLayout(false);
@@ -283,6 +295,7 @@ namespace SampleProject
         internal ToolStripPanel TopToolStripPanel;
         internal ToolStripPanel RightToolStripPanel;
         internal ToolStripPanel LeftToolStripPanel;
+        private ToolStripButton toolStripButton1;
     }
 	
 }
